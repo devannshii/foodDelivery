@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+   <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.order-container {
+    background-color: #fff;
+    padding: 40px;
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.order-container h1 {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.order-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.order-form label {
+    font-weight: bold;
+    color: #333;
+}
+
+.order-form input[type="text"],
+.order-form input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.order-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #ff6b6b;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e55d5d;
+}
+
+   </style>
+</head>
+<body>
+    <!-- Order Form Section -->
+    <div class="order-container">
+        <h1>Order Now</h1>
+        <form action="#" method="post" class="order-form">
+            <div class="form-group">
+                <label for="restaurant-name">Restaurant Name</label>
+                <input type="text" id="restaurant-name" name="restaurant-name" placeholder="Enter restaurant name" required>
+            </div>
+            <div class="form-group">
+                <label for="food-name">Food Name</label>
+                <input type="text" id="food-name" name="food-name" placeholder="Enter food name" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Quantity</label>
+                <input type="number" id="price" name="price" placeholder="Enter Quantity" required>
+            </div>
+            <button type="submit" class="order-btn">Order Now</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Pizza</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.pizza-order-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+}
+
+h1 {
+    font-size: 24px;
+    color: #ff6b6b;
+    margin-bottom: 20px;
+}
+
+.order-pizza-btn {
+    padding: 12px 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-pizza-btn:hover {
+    background-color: #e55d5d;
+}
+
+.restaurant-list {
+    display: none; /* Initially hidden */
+    margin-top: 20px;
+    text-align: left;
+}
+
+.restaurant-list h2 {
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.restaurant-list ul {
+    list-style: none;
+}
+
+.restaurant-list li {
+    padding: 8px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <!-- Pizza Order Section -->
+    <div class="pizza-order-container">
+        <h1>Order Your Favorite Pizza</h1>
+        <button class="order-pizza-btn" onclick="toggleRestaurantList()">Order Pizza</button>
+
+        <div class="restaurant-list" id="restaurantList">
+            <h2>Top Restaurants Serving Pizza</h2>
+            <ul>
+                <li><strong>Pizza Palace</strong> - Classic Margherita, Pepperoni Delight</li>
+                <li><strong>Italiano Pizza</strong> - Cheesy Veggie, Spicy Chicken</li>
+                <li><strong>New York Slice</strong> - BBQ Chicken, Four Cheese</li>
+                <li><strong>Pizza Hub</strong> - Hawaiian, Meat Lovers</li>
+                <li><strong>Pizza Express</strong> - Mushroom Magic, Pepperoni Supreme</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        function toggleRestaurantList() {
+            const restaurantList = document.getElementById("restaurantList");
+            restaurantList.style.display = restaurantList.style.display === "none" ? "block" : "none";
+        }
+    </script>
+</body>
+</html>

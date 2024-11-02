@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Burger</title>
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.container {
+    text-align: center;
+    width: 80%;
+    max-width: 500px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #ff6b6b;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.order-btn {
+    padding: 10px 20px;
+    background-color: #ff6b6b;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: #e55d5d;
+}
+
+.restaurant-list {
+    margin-top: 30px;
+    display: none;
+}
+
+.restaurant {
+    background-color: #fff;
+    margin: 10px 0;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.restaurant h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.restaurant p {
+    font-size: 16px;
+    color: #555;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Order Burger</h1>
+        <p>Click the button to see the best restaurants serving burgers in your area!</p>
+        <button id="order-burger-btn" class="order-btn">Order Burger</button>
+        
+        <!-- Restaurant List -->
+        <div id="restaurant-list" class="restaurant-list">
+            <!-- Restaurants will appear here -->
+            <div class="restaurant">
+                <h2>Grill & Chill</h2>
+                <p>Known for their gourmet burgers with a variety of toppings.</p>
+            </div>
+            <div class="restaurant">
+                <h2>Burger Haven</h2>
+                <p>Famous for their classic and affordable burgers.</p>
+            </div>
+            <div class="restaurant">
+                <h2>Urban Bites</h2>
+                <p>Serves juicy burgers with a twist of modern flavors.</p>
+            </div>
+            <div class="restaurant">
+                <h2>Bistro Burger</h2>
+                <p>Offers organic, grass-fed beef burgers and vegan options.</p>
+            </div>
+        </div>
+    </div>
+
+    <script >
+        document.getElementById("order-burger-btn").addEventListener("click", function() {
+    var restaurantList = document.getElementById("restaurant-list");
+    if (restaurantList.style.display === "none" || restaurantList.style.display === "") {
+        restaurantList.style.display = "block";
+    } else {
+        restaurantList.style.display = "none";
+    }
+});
+    </script>
+</body>
+</html>
